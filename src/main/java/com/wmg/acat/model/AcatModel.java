@@ -8,9 +8,7 @@ import javax.persistence.ColumnResult;
 import javax.persistence.ConstructorResult;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.SqlResultSetMapping;
-
 import java.util.Date;
-import java.util.List;
 
 @Data
 @AllArgsConstructor

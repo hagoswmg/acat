@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class AcatRepositoryImpl implements AcatRepository {
 
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
     public AcatRepositoryImpl(EntityManager entityManager) {
         this.entityManager = entityManager;

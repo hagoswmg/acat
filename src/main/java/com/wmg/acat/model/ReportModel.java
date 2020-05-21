@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TrackModel {
+public class ReportModel {
     private String gpid;
     private String artist;
     private String title;
