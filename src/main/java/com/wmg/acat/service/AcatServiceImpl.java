@@ -41,8 +41,12 @@ public class AcatServiceImpl implements AcatService {
                 trackModel.setType(am.getType());
                 trackModel.setSub_type(am.getSub_type());
                 trackModel.setStreet_date(am.getStreet_date());
+                trackModel.setMajor_label(am.getMajor_label);
+                trackModel.setMarketing_label(am.getMarketing_label);
+                trackModel.setPresentation_label(am.getPresentation_label);
+                trackModel.setCoverart_path(am.getCoverart_path);
 
-                final Track track = new Track(am.getTrack_number(), am.getTrack_title(), am.getIsrc());
+                final Track track = new Track(am.getTrack_number(), am.getTrack_title(), am.getIsrc(), am.getAudio_file, am.getAudio_clip);
                 tracks.add(track);
                 trackModel.setTracks(tracks);
 
@@ -50,7 +54,7 @@ public class AcatServiceImpl implements AcatService {
 
                 map.put(am.getGpid(), models);
             } else {
-                final Track track = new Track(am.getTrack_number(), am.getTrack_title(), am.getIsrc());
+                final Track track = new Track(am.getTrack_number(), am.getTrack_title(), am.getIsrc(), am.getAudio_file, am.getAudio_clip);
                 final TrackModel foundTrackModel = found.get(0);
                 foundTrackModel.getTracks().add(track);
             }

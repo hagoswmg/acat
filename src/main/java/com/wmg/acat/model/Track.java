@@ -11,4 +11,6 @@ public class Track {
     private long track_number;
     private String track_title;
     private String isrc;
+    private String audio_file;
+    private String audio_clip;
 }
